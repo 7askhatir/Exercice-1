@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+	integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+	integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+	crossorigin="anonymous"></script>
+<title>Document</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Date de création</th>
+					<th scope="col">Etat</th>
+					<th scope="col">Nom</th>
+					<th scope="col">Prenom</th>
+					<th scope="col">Nom d'utilisateur</th>
+					<th scope="col">Matricule</th>
+					<th scope="col">Action</th>
+
+				</tr>
+			</thead>
+			<tbody class="table-data" >
+				
+			</tbody>
+		</table>
+		<div class="add">
+			<button class="modal-btn">Ajouter utilisateur</button>
+		</div>
+		<!---------  Form Ajouter utilisateur  ---------->
+		<div class="model-bg">
+			<div class="model">
+				<h3>Ajouter utilisateur</h3><br>
+				<form style="padding: 20px;">
+					<div class="row">
+						<div class="col">
+							<label>Nom</label> <input type="text" id="nom" class="form-control" pattern="[A-Za-z0-9]{1,20}"
+								placeholder="Nom">
+						</div>
+						<div class="col">
+							<label>Prénom</label> <input type="text" id="prenom" class="form-control"
+								placeholder="Prénom">
+						</div>
+						<div class="col">
+							<label>Etat</label> <select class="form-select" id="status"
+								aria-label="Default select example">
+								<option value="Validé">valide</option>
+								<option value="Rejeté">rejected</option>
+								<option selected value="En validation">on-validation</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<label>Nom d'utilisateur</label> <input type="text" id="nomComplet"
+								class="form-control" placeholder="Nom d'utilisateur">
+						</div>
+						<div class="col-md-4">
+							<label>Date de Création</label> <input type="date" id="thisDate"
+								class="form-control" placeholder="Date de Création" value="">
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<label>Matricule</label> <input type="text" class="form-control" id="matricul"
+									placeholder="Matricule">
+							</div>
+						</div>
+                        <div class="row">
+                            <div>
+                                <input type="button" class="eng-btn" value="Enregistrer">
+                            </div>
+                        </div>
+					</div>
+                    <i class="fa fa-times fa-lg" id="close" aria-hidden="true"></i>
+				</form>
+			</div>
+		</div>
+		<div class="alert hide">
+			<span class="msg"></span>
+		</div>
+	</div>
+	<script src="../js/script.js"></script>
+</body>
+</html>
