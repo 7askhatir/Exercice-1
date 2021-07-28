@@ -77,7 +77,7 @@ function Alert(txt,color){
   setTimeout(function(){
   alert.classList.remove("show");
   alert.classList.add("hide");
-  },5000);
+  },4000);
 }
 
 // ----------------------- EnClick sur button  (Ajouter utilisateur) ---------------------
